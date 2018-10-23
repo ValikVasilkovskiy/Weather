@@ -11,8 +11,34 @@
     <title>Day weather forecast</title>
   </head>
   <body>
-    <h1>Hi there!</h1>
-    <p>It works!</p>
+    <h2 align="center" >Project Weather Forecast</h2>
+
+    <button type="button" class="btn btn-secondary">Submit</button>
+    <button type="button" class="btn btn-secondary">Cancel</button>
+
+    <table border="1" width="45%" align="center">
+        <thead>
+            <tr align="center" valign="top">
+                <th>Name</th>
+                <th>Date</th>
+                <th>Day Temp</th>
+                <th>Night Temp</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for forecast in forecasts %}
+                <tr>
+                    <th>{{ forecast.name }}</th>
+                    <th>{{ forecast.date }}</th>
+                    <th>{{ forecast.forecast_day_temp }}</th>
+                    <th>{{ forecast.forecast_night_temp }}</th>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
