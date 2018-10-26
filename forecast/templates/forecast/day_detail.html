@@ -1,0 +1,10 @@
+{% extends 'forecast/base.html' %}
+
+{% block content %}
+    <tr>
+        <th>{{ day.name }}</th>
+        <th>{{ day.date }}</th>
+        <th>{{ day.forecast_day_temp }}</th>
+        <th>{{ day.forecast_night_temp }}</th>
+    </tr>
+{% endblock %}

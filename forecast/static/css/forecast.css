@@ -1,0 +1,12 @@
+h2 {
+    color: cornflowerblue;
+    font-family: 'Lobster';
+}
+
+body {
+    padding-left: 15px;
+}
+
+.table-weather-forecast-header {
+    background-color: cornflowerblue;
+}
