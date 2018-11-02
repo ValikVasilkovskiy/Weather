@@ -7,40 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="//cdn.bootcss.com/bootstrap-datetimepicker/4.17.44/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/forecast.css' %}">
 
-
-      <title>Day weather forecast</title>
+    <title>Day weather forecast</title>
   </head>
+
   <body>
-    <h2 align="center">Project Weather Forecast</h2>
+    <div>
+        <h2 align="center">Project Weather Forecast</h2>
+        <p>
+            <a href="{% url 'day_new' %}" class="btn btn-dark">
+                <span class="glyphicon glyphicon-cog"></span> Add Day
+            </a>
+        </p>
+    </div>
+    <br>
 
-    <button type="button" class="btn btn-secondary">Submit</button>
-    <button type="button" class="btn btn-secondary">Cancel</button>
-
-    <table border="1" width="45%" align="center">
-        <thead class="table-weather-forecast-header">
-            <tr align="center" valign="top">
-                <th>Name</th>
-                <th>Date</th>
-                <th>Day Temp</th>
-                <th>Night Temp</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            {% block content %}
-            {% endblock %}
-
-        </tbody>
+    <table class="table">
+        {% block content %}
+        {% endblock %}
     </table>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.44/js/bootstrap-datetimepicker.min.js"></script>
   </body>
 </html>

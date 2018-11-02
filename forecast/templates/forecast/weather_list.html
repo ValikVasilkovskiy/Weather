@@ -1,12 +1,20 @@
 {% extends 'forecast/base.html' %}
 
 {% block content %}
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Day Temp</th>
+            <th scope="col">Night Temp</th>
+        </tr>
+    </thead>
     {% for forecast in forecasts %}
         <tr>
-            <th><a href="{% url 'day_detail' pk=forecast.pk %}"> {{ forecast.name }}</a></th>
-            <th>{{ forecast.date }}</th>
-            <th>{{ forecast.forecast_day_temp }}</th>
-            <th>{{ forecast.forecast_night_temp }}</th>
+            <th scope="row"><a href="{% url 'day_detail' pk=forecast.pk %}"> {{ forecast.name }}</a></th>
+            <th scope="row">{{ forecast.date }}</th>
+            <th scope="row">{{ forecast.forecast_day_temp }}</th>
+            <th scope="row">{{ forecast.forecast_night_temp }}</th>
         </tr>
     {% endfor %}
 {% endblock %}

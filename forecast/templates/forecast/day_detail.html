@@ -1,10 +1,20 @@
 {% extends 'forecast/base.html' %}
 
 {% block content %}
-    <tr>
-        <th>{{ day.name }}</th>
-        <th>{{ day.date }}</th>
-        <th>{{ day.forecast_day_temp }}</th>
-        <th>{{ day.forecast_night_temp }}</th>
-    </tr>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Day Temp</th>
+            <th scope="col">Night Temp</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{ day.name }}</th>
+            <th scope="row">{{ day.date }}</th>
+            <th scope="row">{{ day.forecast_day_temp }}</th>
+            <th scope="row">{{ day.forecast_night_temp }}</th>
+        </tr>
+    </tbody>
 {% endblock %}
